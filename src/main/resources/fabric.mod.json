@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "consumablemeth",
+  "version": "${version}",
+  "name": "Consumable Meth",
+  "description": "Meth (yippeee)",
+  "authors": ["TryhardDoggo"],
+  "contact": {
+    "repo": "https://github.com/brandon/ConsumableMeth"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.td.cm.ConsumableMeth"
+    ]
+  },
+  "mixins": [
+    "consumablemeth.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
