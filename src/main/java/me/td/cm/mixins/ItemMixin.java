@@ -30,25 +30,6 @@ import java.util.concurrent.TimeUnit;
 public abstract class ItemMixin {
     @Shadow public abstract Item asItem();
 
-    @Unique
-    public void onMethUse(World world, PlayerEntity user, Hand hand, MethType type) {
-    }
-
-//    @Inject(method = "use", at = @At("HEAD"))
-//    public void onGetUseAction(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-//        String itemID = Registries.ITEM.getId(user.getStackInHand(hand).getItem()).toString();
-//
-//        switch(itemID) {
-//            case "createbb:blue_meth", "createbb:white_meth": {
-//                onMethUse(world, user, hand, itemID.equals("createbb:blue_meth") ? MethType.BLUE : MethType.WHITE);
-//                break;
-//            }
-//            default: {
-//                break;
-//            }
-//        }
-//    }
-
     @Inject(method = "isFood", at = @At("HEAD"), cancellable = true)
     public void onIsFood(CallbackInfoReturnable<Boolean> cir) {
         Item thisItem = asItem();
