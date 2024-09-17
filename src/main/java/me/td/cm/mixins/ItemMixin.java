@@ -1,7 +1,6 @@
 package me.td.cm.mixins;
 
 import me.td.cm.ConsumableMeth;
-import me.td.cm.types.MethType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
